@@ -1,0 +1,38 @@
+.toolbar-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 88px;
+}
+.MuiToolbar-gutters {
+    max-width: 1440px;
+    width: 100%;
+    align-self: center;
+}
+.MuiAppBar-colorPrimary{
+    /*background: #d8a2a2;*/
+    background: #404958;
+    /*-webkit-mask-image: -webkit-gradient(linear, left top,*/
+    /*left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0.4)));*/
+    /*box-shadow: inset 0px 0px 20px rgba(0,0,0,0.2);*/
+}
+
+.toolbar-main-title{
+    font-size: 3.2rem;
+    line-height: 3rem;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive,'Roboto', 'Oxygen', sans-serif;
+}
+.toolbar-second-title{
+    justify-content: center;
+    display: flex;
+    font-family: 'Playfair Display', serif, sans-serif;
+}
+
+.MuiTypography-h6{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+.toolbar-content p {
+    text-shadow: #000 1px 0 10px;
+}

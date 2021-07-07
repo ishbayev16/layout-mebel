@@ -12,7 +12,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {withRouter} from "react-router";
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
+import "./Toolbar.css";
 
 
 const drawerWidth = 240;
@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
-        backgroundColor: "#303030",
+        // backgroundColor: "#303030",
+        // backgroundColor: "#d8a2a2",
         transition: theme.transitions.create(['width', 'margin'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
@@ -31,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
     },
     appBarShift: {
         marginLeft: drawerWidth,
-        width: `calc(100% - ${drawerWidth}px)`,
+        // width: `calc(100% - ${drawerWidth}px)`,
+        width: "100%",
         transition: theme.transitions.create(['width', 'margin'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.enteringScreen,
@@ -83,26 +85,50 @@ function ButtonAppBar(props) {
                 >
                     <MenuIcon />
                 </IconButton>
-                <div className="flex w-full justify-between items-center">
+                <div className="toolbar-content">
                     <Typography variant="h6" noWrap>
-                        <p>{t('toolbar.title')}</p>
+                        <p>Products</p>
+                    </Typography>
+                    <Typography variant="h6" noWrap>
+                        <p>Collections</p>
+                    </Typography>
+                    <Typography variant="h6" noWrap>
+                        <p>Project</p>
+                    </Typography>
+
+                    <div className="flex justify-center flex-col align-center">
+                        <div className="toolbar-main-title">
+                            <p>Ak Maya</p>
+                        </div>
+                        <div className="toolbar-second-title">
+                            <p>Ashgabat</p>
+                        </div>
+                    </div>
+                    <Typography variant="h6" noWrap>
+                        <p>About Us</p>
+                    </Typography>
+                    <Typography variant="h6" noWrap>
+                        <p>Showrooms</p>
+                    </Typography>
+                    <Typography variant="h6" noWrap>
+                        <p>Contact Us</p>
                     </Typography>
 
 
-                    <div>
-                        <IconButton
-                            className="text-white"
-                            aria-label="delete" key={"key"}
-                            onClick={() => {
-                                localStorage.clear();
-                                dispatch(Actions.setLoading(false));
-                                dispatch(Actions.setMessage(null, "success"));
-                                props.history.push('/login');
-                            }}
-                        >
-                            <ExitToAppIcon className="text-white"/>
-                        </IconButton>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <IconButton*/}
+                    {/*        className="text-white"*/}
+                    {/*        aria-label="delete" key={"key"}*/}
+                    {/*        onClick={() => {*/}
+                    {/*            localStorage.clear();*/}
+                    {/*            dispatch(Actions.setLoading(false));*/}
+                    {/*            dispatch(Actions.setMessage(null, "success"));*/}
+                    {/*            props.history.push('/login');*/}
+                    {/*        }}*/}
+                    {/*    >*/}
+                    {/*        <ExitToAppIcon className="text-white"/>*/}
+                    {/*    </IconButton>*/}
+                    {/*</div>*/}
                 </div>
             </Toolbar>
 

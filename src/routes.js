@@ -11,7 +11,8 @@ function Routes() {
 
     return (
         <Switch>
-            <Route exact path='/' render={() => <Layout navbar={true} toolbar={true} children={<Home/>}/> } />
+            <Route exact path='/' render={() => <Layout navbar={false} toolbar={true} children={<Home/>}/> } />
+
             <Route exact path='/page1' render={() => <Layout navbar={true} toolbar={true} children={<Advantages/>}/> } />
             <Route exact path='/login' render={() => <Layout navbar={false} toolbar={false} children={<Login/>}/> } />
         </Switch>
